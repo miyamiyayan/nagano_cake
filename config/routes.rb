@@ -19,10 +19,11 @@ Rails.application.routes.draw do
   resources :customers, only:[:show, :edit, :update]
   post "/customers/confirm" => 'public/customers#confirm'
   patch "/customers/withdraw" => 'public/customers#withdraw'
-  
+
 
   namespace :admin do
     get '/' => 'homes#top'
+    resources :items
     
   end
 

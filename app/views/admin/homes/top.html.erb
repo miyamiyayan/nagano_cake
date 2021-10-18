@@ -1,2 +1,20 @@
-<h1>Admin::Homes#top</h1>
-<p>Find me in app/views/admin/homes/top.html.erb</p>
+<div class="container-xl">
+  
+  <div class="row">
+    <div class="col-xl-10">
+      <h3>注文履歴一覧</h3>
+    </div>
+  </div>
+
+<!--作業前-->
+  <% @orders.each do |order| %>
+  <div>
+    <p>購入日時：<%= orders.created_at %></p>
+    <p>購入者：<%= orders.customer.last_name %></p>
+    <p>注文個数：</p>
+    <p>注文ステータス：<%= orders.status %></p>
+  </div>
+  <% end %>
+
+
+</div>
