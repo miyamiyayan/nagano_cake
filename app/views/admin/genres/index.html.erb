@@ -10,7 +10,7 @@
 
 <!--ジャンル登録-->
 <div>
-  <%= form_with model:@genre, url:'/admin/genres', local:true do |f| %>
+  <%= form_with model:@genre, url:admin_genres_path, local:true do |f| %>
     <div>
       <%= f.label 'ジャンル名' %>
       <%= f.text_field :name %>
