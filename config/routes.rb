@@ -25,7 +25,8 @@ Rails.application.routes.draw do
     get '/' => 'homes#top'
     resources :genres, only:[:index, :create, :edit, :update]
     resources :items, except: [:destroy]
-    
+    resources :customers, except: [:create, :destroy, :new]
+
   end
 
 
