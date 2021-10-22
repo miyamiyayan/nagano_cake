@@ -1,29 +1,95 @@
-<h2>Sign up</h2>
+<div class="container-xl">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "public/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="row">
+    <div class="col-xl-6">
+      <h3>新規会員登録</h3>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="row">
+    <div class="col-xl-6">
+      <h4>会員の方はこちらからログイン</h4>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+
+  <div class="row">
+    <div class="col-xl-3"></div>
+
+    <div class="col-xl-9">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "public/shared/error_messages", resource: resource %>
+
+
+        <div>
+          <p>名前(姓)<%= f.text_field :last_name, :placeholder => "令和" %>(名)<%= f.text_field :last_name, :placeholder => "道子" %></p>
+        </div>
+
+        <div>
+          <p>フリガナ(セイ)<%= f.text_field :last_name_kana, :placeholder => "レイワ" %>(メイ)<%= f.text_field :first_name_kana, :placeholder => "ミチコ" %></p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-2">
+            <label>メールアドレス</label>
+          </div>
+          <div class="col-xl-10">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+        </div>
+
+        <div>
+          <p>郵便番号（ハイフンなし）<%= f.text_field :postal_code, :placeholder => "0000000" %></p>
+        </div>
+
+        <div>
+          <p>住所<%= f.text_field :address, :placeholder => "東京都渋谷区〇〇" %></p>
+        </div>
+
+        <div>
+          <p>電話番号（ハイフンなし）<%= f.text_field :telephone_number, :placeholder => "0000000000" %></p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-2">
+            <label>パスワード（６文字以上）</label>
+          </div>
+          <div class="col-xl-10">
+            <% if @minimum_password_length %>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password" %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-2">
+            <label>パスワード（確認用）</label>
+          </div>
+          <div class="col-xl-10">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+        </div>
+    </br>
+        <div class="row">
+          <div class="col-xl-2">
+          </div>
+          <div class="col-xl-10">
+          <%= f.submit "新規登録", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="row">
+    <div class="col-xl-6">
+      <h4>既に登録済みの方</h4>
+    </div>
   </div>
-<% end %>
 
-<%= render "public/shared/links" %>
+  <div class="row">
+    <div class="col-xl-6">
+      <p><%= link_to "こちら", new_customer_session_path %> からログインしてください。</p>
+    </div>
+  </div>
+</div>
