@@ -26,7 +26,7 @@
     <!--ユーザーでサインインの場合-->
       <% if customer_signed_in? %>
         <li>
-          <%= link_to "マイページ", root_path, class: "btn btn-primary" %>
+          <%= link_to "マイページ", customers_path, class: "btn btn-primary" %>
         </li>
         <li>
           <%= link_to "商品一覧", root_path, class: "btn btn-primary" %>
