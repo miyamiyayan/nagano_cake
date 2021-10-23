@@ -4,15 +4,16 @@ Rails.application.routes.draw do
 # トップとアバウト
   root to: 'public/homes#top'
   get "/about" => 'public/homes#about'
-# 商品一覧と詳細
-  get "/items" => 'public/items#index'
-  get "/items/:id" => 'public/items#show'
 # マイページと編集
   get "/customers/" => 'public/customers#show'
   get "/customers/edit" => 'public/customers#edit'
   patch "/customers/" => 'public/customers#update'
   get "/customers/confirm" => 'public/customers#confirm'
   patch "/customers/withdraw" => 'public/customers#withdraw'
+# カスタマーの商品
+  scope module: :public do
+    resources :items, only:[:index, :show]
+  end
 
 
   namespace :admin do
