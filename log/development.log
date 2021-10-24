@@ -4756,3 +4756,905 @@ Processing by Public::ItemsController#show as HTML
 Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 106.72.46.224 at 2021-10-24 00:12:26 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5028ms (Views: 5018.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-10-24 00:12:33 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 117ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 106.72.46.224 at 2021-10-24 00:12:40 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 174ms (Views: 150.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/customers/sign_in" for 106.72.46.224 at 2021-10-24 00:12:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aGIVg/j6g2Hta2X33NxVjEUdhBxHPBwB6T1eFRLyeJdoXoiPor5WvPFrK1Si2waOVGj8zpU4jmpPuDSfb/1umg==", "customer"=>{"email"=>"aaa@aaa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 357ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-10-24 00:12:46 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 00:12:50 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 151ms (Views: 142.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:12:52 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (uninitialized constant Public::AddressesController::Addresses):
+  
+app/controllers/public/addresses_controller.rb:5:in `index'
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:15:54 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:36
+  Rendered public/addresses/index.html.erb within layouts/application (9.7ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 164ms (Views: 151.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:16:34 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:18:12 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (7.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 00:18:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 119ms (Views: 111.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:18:17 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (7.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:18:39 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1v922wD3tGAoynYorPd/Atj30x2fYzyDD0EskF8GQ+1nVSOP0SpN1faR6YaGiS01BBUf0t81O+SClsv27znGw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"田中太郎"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: addresses):
+  
+app/controllers/public/addresses_controller.rb:32:in `address_params'
+app/controllers/public/addresses_controller.rb:9:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:19:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1v922wD3tGAoynYorPd/Atj30x2fYzyDD0EskF8GQ+1nVSOP0SpN1faR6YaGiS01BBUf0t81O+SClsv27znGw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"田中太郎"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 22ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:19:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (6.6ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 142ms (Views: 139.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:19:33 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"80AGDJSQ8CD48hT5M0JMUC1QUsc3wDF4/dwvY2FSLBTG7/nPHzHZ48RNrAuUlWIa8p7wbtAlAECRLfnZuGAdFg==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区テスト２", "name"=>"れいれい"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:19:33 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.8ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 00:23:51 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 103ms (Views: 94.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:23:54 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (6.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 123ms (Views: 121.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:25:10 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/customers/sign_out" for 106.72.46.224 at 2021-10-24 00:25:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+TOlj0mGbOmiBHKKw8tIlrDKJ5O8LoSxxxEjq6hROd7MnFpMwidFKp67ynhkHGbcbwSFOlvLtYmr4PURcWMI3A=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 27ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-10-24 00:25:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-10-24 00:25:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 138ms (Views: 126.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/sign_in" for 106.72.46.224 at 2021-10-24 00:25:24 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 110ms (Views: 102.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/sign_in" for 106.72.46.224 at 2021-10-24 00:25:28 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nToj7J/EW6JCHMF6ANK4X+hhdCY/VjBjSh9rXgRtfQFSrmcHzN+cUmFyo1bVOFYyH8KPLZqjaLIy3KAH1v8Igw==", "admin"=>{"email"=>"naganocake@aaa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "naganocake@aaa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 371ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 106.72.46.224 at 2021-10-24 00:25:32 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:11
+  Rendered public/items/index.html.erb within layouts/application (20.2ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 160ms (Views: 119.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/genres" for 106.72.46.224 at 2021-10-24 00:25:33 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:33
+  Rendered admin/genres/index.html.erb within layouts/application (4.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 121ms (Views: 113.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/genres" for 106.72.46.224 at 2021-10-24 00:25:50 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tWhemB3jwkxCQtDQAHhFCttx1XBqhmDFnKMck/fEOvPjSMNQbezOQ8T3G98k1cFa2LoSoX8V6eS4CnYBcKcEvQ==", "genre"=>{"name"=>"追加：ザッハトルテ"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:10
+  [1m[36mGenre Create (1.7ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "追加：ザッハトルテ"], ["created_at", "2021-10-24 00:25:50.711232"], ["updated_at", "2021-10-24 00:25:50.711232"]]
+  ↳ app/controllers/admin/genres_controller.rb:10
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/genres_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/admin/genres
+Completed 302 Found in 12ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/admin/genres" for 106.72.46.224 at 2021-10-24 00:25:50 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:33
+  Rendered admin/genres/index.html.erb within layouts/application (10.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 170ms (Views: 168.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/admin/sign_out" for 106.72.46.224 at 2021-10-24 00:26:16 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"r8O3igX0MpOl2qFrHEg4GaqxVA9MFEmKyui1gMTCSYLZEmqjcmoOO9/xmNK85ZGfGeiNk05FyTQtLesc798ivQ=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/sign_in" for 106.72.46.224 at 2021-10-24 00:26:16 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 106.72.46.224 at 2021-10-24 00:26:18 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 106.72.46.224 at 2021-10-24 00:26:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N0k+GC48thxLPzFM1pMbB+FzklWEApYX9ZRdyFEvgENdN4+CYo0m0xhrAUOjGa+lvk7KC8l8yydVRp/poQmVpQ==", "customer"=>{"email"=>"aaa@aaa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 310ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-10-24 00:26:23 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 143ms (Views: 141.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 00:26:27 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 114ms (Views: 109.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:26:30 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (4.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:27:40 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ESa4OcLYlGBo0SggvrTvMYaYdrGzJG17KOXxaSPKhjXTYDdQELz9JBKnmLe1+bQcIwDfe+ACy9Jfz8ll3SBK/A==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区テスト２", "name"=>"田中太郎"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `addresses' for #<Public::AddressesController:0x00007fb670984878>
+Did you mean?  address):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:28:17 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"heupqgRdBcoKKMF8JHTfgHTEpeZ0R9WNGicfsvukFHmqCAlYIROuPjk3eF+3NnqEVRSgTgSsvFmc5U13VxvQ7w==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区テスト２", "name"=>"田中太郎"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 20ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:28:17 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (6.0ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:33:02 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.1ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 150ms (Views: 130.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:33:10 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60r/EY9sSf80r4dBAQyBUTx3ZWmy8wKL5+Z4VzJd5XTEqV/jqiLiCwewPmKSTiRVHadgwcIYa19hJCqSnuIh4g==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区テスト3", "name"=>"れいれい"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:33:10 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:41:27 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvI7NPEdyW77oM29EYQqnBEkHaW33rxddkiQKKi0jPW1EZvG1FNimsi/dJ6Cxo+YMPQYDcc11YnwisLtBAtIYw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 422 Unprocessable Entity in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Customers must exist):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:44:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvI7NPEdyW77oM29EYQqnBEkHaW33rxddkiQKKi0jPW1EZvG1FNimsi/dJ6Cxo+YMPQYDcc11YnwisLtBAtIYw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Customers must exist):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:46:12 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvI7NPEdyW77oM29EYQqnBEkHaW33rxddkiQKKi0jPW1EZvG1FNimsi/dJ6Cxo+YMPQYDcc11YnwisLtBAtIYw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[36mAddress Create (0.5ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "tesutes"], ["postal_code", "9876543"], ["address", "東京都千代田区"], ["created_at", "2021-10-24 00:46:12.746414"], ["updated_at", "2021-10-24 00:46:12.746414"]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: addresses.customer_id may not be NULL: INSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:47:12 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvI7NPEdyW77oM29EYQqnBEkHaW33rxddkiQKKi0jPW1EZvG1FNimsi/dJ6Cxo+YMPQYDcc11YnwisLtBAtIYw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[36mAddress Create (0.5ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "tesutes"], ["postal_code", "9876543"], ["address", "東京都千代田区"], ["created_at", "2021-10-24 00:47:12.147948"], ["updated_at", "2021-10-24 00:47:12.147948"]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: addresses.customer_id may not be NULL: INSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:48:47 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvI7NPEdyW77oM29EYQqnBEkHaW33rxddkiQKKi0jPW1EZvG1FNimsi/dJ6Cxo+YMPQYDcc11YnwisLtBAtIYw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[36mAddress Create (0.6ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "tesutes"], ["postal_code", "9876543"], ["address", "東京都千代田区"], ["created_at", "2021-10-24 00:48:47.840323"], ["updated_at", "2021-10-24 00:48:47.840323"]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: addresses.customer_id may not be NULL: INSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 00:49:39 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 667ms (Views: 639.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 00:49:42 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (8.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 104ms (Views: 95.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 00:49:53 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uh09hsLzJ3oGl8m87RBIAb65WAmXXSjLa4FwumozzFZ4W7LvEJdOPnzheSvmXRMsGyHxw8R7jmIcq0i2lNkAnw==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"ためしやためお"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[36mAddress Create (0.5ms)[0m  [1m[32mINSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ためしやためお"], ["postal_code", "9876543"], ["address", "東京都千代田区"], ["created_at", "2021-10-24 00:49:53.244720"], ["updated_at", "2021-10-24 00:49:53.244720"]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: addresses.customer_id may not be NULL: INSERT INTO "addresses" ("name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 01:11:21 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"upwz3jVVuUF78oxxFtGW69fqzPXT4jMeeIpynO4JySyVf5MsEBsStUjtNVKFkzPv9jrJXaMJWsr+SCBZQrYNug==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"ためしやためお"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:10
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 46ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:11:21 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected do
+...ddresses_path, local: true), do |f| @output_buffer.safe_appe...
+...                             ^~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected do
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:12:26 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected do
+...ddresses_path, local: true), do |f| @output_buffer.safe_appe...
+...                             ^~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected do
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:17:17 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+...st_comment], local: true), url:addresses_path, local:true do...
+...                           ^~~~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:17:30 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+...st_comment], local: true), url:addresses_path, local:true do...
+...                           ^~~~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:17:46 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+...st_comment], local: true), url:addresses_path, local:true do...
+...                           ^~~~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/" for 106.72.46.224 at 2021-10-24 01:18:08 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.2ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 696ms (Views: 692.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 01:18:10 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 124ms (Views: 116.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:18:12 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  Rendered public/addresses/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+...st_comment], local: true), url:addresses_path, local:true do...
+...                           ^~~~
+/home/ec2-user/environment/nagano_cake/app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/public/addresses/index.html.erb:13: syntax error, unexpected tLABEL
+app/views/public/addresses/index.html.erb:57: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:18:34 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (25.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 139ms (Views: 137.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 01:18:43 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HF01fK/hACeGD8CkVL2+kiTOljNB8GGJ5c0fpP8u/IIzvpWOiq+r07UQeYfH/xuWBR6TmzEbCF1jD01hU5E4FA==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Public::AddressesController:0x00007f7584ae7440>
+Did you mean?  current_customer):
+  
+app/controllers/public/addresses_controller.rb:10:in `create'
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 01:19:05 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HF01fK/hACeGD8CkVL2+kiTOljNB8GGJ5c0fpP8u/IIzvpWOiq+r07UQeYfH/xuWBR6TmzEbCF1jD01hU5E4FA==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 35ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:19:06 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (6.2ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-10-24 01:19:37 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 113ms (Views: 109.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 01:19:39 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:19:41 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (5.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 135ms (Views: 124.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 01:19:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YH4D7MqoTj9CGp/cZMgcFDJC4AkDK6BktuDOal0clo2iOIyFGMwnezhsL0tvhUc5l9pJw1ANBs3ByvZmo/ZaRA==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/addresses
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/addresses" for 106.72.46.224 at 2021-10-24 01:19:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#index as HTML
+  Rendering public/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/public/addresses/index.html.erb:39
+  Rendered public/addresses/index.html.erb within layouts/application (6.2ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 120ms (Views: 118.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/addresses" for 106.72.46.224 at 2021-10-24 01:20:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTpgpsMlcnfiMwgyfs7kJ2i+68IYo6fgkT3yOQLglsw22cBU5mvZg9EssRHtjEEjSW7uamhIzjQX/6D8rl9SWg==", "address"=>{"postal_code"=>"9876543", "address"=>"東京都千代田区", "name"=>"tesutes"}, "commit"=>"新規登録"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/addresses_controller.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/addresses_controller.rb:11
+Completed 422 Unprocessable Entity in 34ms (ActiveRecord: 2.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Customers must exist):
+  
+app/controllers/public/addresses_controller.rb:11:in `create'
+Started GET "/customers" for 106.72.46.224 at 2021-10-24 01:22:13 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:8
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 142ms (Views: 118.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/items" for 106.72.46.224 at 2021-10-24 01:22:14 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:11
+  Rendered public/items/index.html.erb within layouts/application (30.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 171ms (Views: 156.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/1" for 106.72.46.224 at 2021-10-24 01:22:16 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7
+  Rendering public/items/show.html.erb within layouts/application
+  Rendered public/items/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:27
+Completed 200 OK in 126ms (Views: 116.7ms | ActiveRecord: 0.3ms)
+
+

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 # カスタマーの商品
   scope module: :public do
     resources :items, only:[:index, :show]
+    resources :addresses, except: [:new, :edit]
   end
 
 
