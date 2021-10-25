@@ -6,21 +6,30 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-3"></div>
+
+  <div class="col-md-9">
+
 <!--商品一覧-->
-  <div>
-    <% @items.each do |item| %>
-      <div>
-        <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
-      </div>
-      <div>
-        <%= link_to item_path(item.id) do %>
-          <%= item.name %>
-        <% end %>
+    <div class="row">
+      <% @items.each do |item| %>
+      <div  class="col-md-3">
+        <div>
+          <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
+        </div>
+        <div>
+          <%= link_to item_path(item.id) do %>
+            <%= item.name %>
+          <% end %>
         </br>
-        <%= number_to_currency(item.price,  :locale => 'jp') %>
+          <%= number_to_currency(item.price,  :locale => 'jp') %>
+        </div>
       </div>
       <% end %>
+    </div>
   </div>
+</div>
 
 
 </div>

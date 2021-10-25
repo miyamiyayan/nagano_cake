@@ -11,21 +11,21 @@
 
 <!--商品一覧-->
   <div>
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th>商品ID</th>
-        <th>商品名</th>
-        <th>税抜価格</th>
-        <th>ジャンル</th>
-        <th>ステータス</th>
+        <th scope="col">商品ID</th>
+        <th scope="col">商品名</th>
+        <th scope="col">税抜価格</th>
+        <th scope="col">ジャンル</th>
+        <th scope="col">ステータス</th>
       </tr>
     </thead>
 <!--ここから下が可変-->
     <tbody>
       <% @items.each do |item| %>
         <tr>
-          <td><%= item.id %></td>
+          <th scope="col"><%= item.id %></td>
           <td>
             <%= link_to admin_item_path(item.id) do %>
               <%= item.name %>
