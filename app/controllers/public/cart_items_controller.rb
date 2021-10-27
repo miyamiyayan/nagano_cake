@@ -1,7 +1,8 @@
 class Public::CartItemsController < ApplicationController
 
   def index
-     @cart_items = CartItem.all
+    @customer = Customer.find(current_customer.id)
+    @cart_items = @customer.cart_items
   end
 
   def update

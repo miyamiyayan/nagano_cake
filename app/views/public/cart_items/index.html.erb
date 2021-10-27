@@ -25,10 +25,13 @@
           <%= attachment_image_tag cart_item.item, :image, :fill, 40, 40, format: 'jpeg' %>　<%= cart_item.item.name %>
         </td>
         <td>
-          <%= number_to_currency(cart_item.item.price,  :locale => 'jp') %>
+          <%= number_to_currency(cart_item.item.with_tax_price,  :locale => 'jp') %>
         </td>
         <td>
           <%= cart_item.amount %>
+        </td>
+        <td>
+          <%= number_to_currency(cart_item.subtotal,  :locale => 'jp') %>
         </td>
         <td>
           <p>削除する</p>
