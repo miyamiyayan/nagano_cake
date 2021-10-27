@@ -1,0 +1,40 @@
+<div class="container-xl">
+
+  <div class="row">
+    <div class="col-xl-10">
+      <h3>ショッピングカート</h3>
+    </div>
+  </div>
+
+<div class="col-xl-12">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">商品名</th>
+        <th scope="col">単価（税込）</th>
+        <th scope="col">数量</th>
+        <th scope="col">小計</th>
+        <th scope="col",colspan="1"></th>
+      </tr>
+    </thead>
+<!--ここから下が可変-->
+    <tbody>
+      <% @cart_items.each do |cart_item| %>
+      <tr scope="col">
+        <td>
+          <%= attachment_image_tag cart_item.item, :image, :fill, 40, 40, format: 'jpeg' %>　<%= cart_item.item.name %>
+        </td>
+        <td>
+          <%= number_to_currency(cart_item.item.price,  :locale => 'jp') %>
+        </td>
+        <td>
+          <%= cart_item.amount %>
+        </td>
+        <td>
+          <p>削除する</p>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
