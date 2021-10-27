@@ -4,7 +4,7 @@ class Order < ApplicationRecord
     self.last_name + " " + self.first_name
   end
 
-  belongs_to :customers
-  has_many :order_details
+  belongs_to :customer
+  has_many :order_details, dependent: :destroy
 
 end
