@@ -34,10 +34,28 @@
           <%= number_to_currency(cart_item.subtotal,  :locale => 'jp') %>
         </td>
         <td>
-          <p>削除する</p>
+          <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-success" %>
         </td>
+        <% @sum += cart_item.subtotal %>
       </tr>
       <% end %>
+
     </tbody>
   </table>
+
+  <div class="row">
+    <div class="col-xl-8">
+    </div>
+
+    <div class="col-xl-4">
+      <table>
+        <tr>
+          <th>合計金額</th>
+          <td><%= number_to_currency(@sum, :locale => 'jp') %></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
 </div>
