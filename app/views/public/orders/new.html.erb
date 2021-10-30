@@ -1,7 +1,7 @@
 <h3>注文情報入力画面</h3>
 
 <div>
-  <%= form_with model:@orde, url:new_order_path, local:true do |f| %>
+  <%= form_with model:@order, url:orders_confirm_path, local:true do |f| %>
     <div>
       <h4>支払方法</h4>
         <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
@@ -26,10 +26,13 @@
         <%= f.radio_button :address_option, 2 %>
           <%= f.label :mailing_full_addres, "新しいお届け先" %>
           </br>
-          <%= f.label '郵便番号' %><%= f.text_field :postal_code, :placeholder => "0000000" %></br>
-          <%= f.label '住所' %><%= f.text_field :address, :placeholder => "東京都渋谷区〇〇" %></br>
-          <%= f.label '宛名' %><%= f.text_field :name, :placeholder => "長野例" %></br>
+          <%= f.label '郵便番号' %><%= f.text_field :mailing_address_postal_code, :placeholder => "0000000" %></br>
+          <%= f.label '住所' %><%= f.text_field :mailing_address, :placeholder => "東京都渋谷区〇〇" %></br>
+          <%= f.label '宛名' %><%= f.text_field :mailing_address_name, :placeholder => "長野例" %></br>
     </div>
+    
+    <%= f.hidden_field :customer_id, value: @customer.id %>
+    
     <%= f.submit '確認画面へ進む' %>
   <% end %>
 </div>

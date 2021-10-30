@@ -1,0 +1,42 @@
+<div class="container-xl">
+<h3>注文情報確認</h3>
+
+<!--カート情報出力-->
+  <div class="row">
+    <div class="col-xl-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">商品名</th>
+            <th scope="col">単価（税込）</th>
+            <th scope="col">数量</th>
+            <th scope="col">小計</th>
+          </tr>
+        </thead>
+<!--ここから下が可変-->
+        <tbody>
+          <% @cart_items.each do |cart_item| %>
+          <tr scope="col">
+            <td><%= attachment_image_tag cart_item.item, :image, :fill, 30, 30, format: 'jpeg' %>　<%= cart_item.item.name %></td>
+            <td><%= number_to_currency(cart_item.item.with_tax_price,  :locale => 'jp') %></td>
+            <td><%= cart_item.amount %></td>
+            <td><%= number_to_currency(cart_item.subtotal, :locale => 'jp') %></td>
+            <% @sum += cart_item.subtotal %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+  <div class="row">
+    <div class="col-xl-4">
+      <table class="table">
+        <tr>
+          <th scope="col">商品合計金額</th>
+          <td scope="col"><%= number_to_currency(@sum, :locale => 'jp') %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+<!--オーダー情報出力-->
