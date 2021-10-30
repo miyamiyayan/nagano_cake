@@ -54,18 +54,25 @@
       </table>
 
   <div class="row">
-    <div class="col-xl-8">
+    <div class="col-xl-3">
+      <%= link_to "買い物を続ける", items_path, class: "btn btn-primary" %>
     </div>
 
+    <div class="col-xl-5">
+    </div>
+
+
     <div class="col-xl-4">
-      <table>
+      <table class="table">
         <tr>
-          <th>合計金額</th>
-          <td><%= number_to_currency(@sum, :locale => 'jp') %></td>
+          <th scope="col">合計金額</th>
+          <td scope="col"><%= number_to_currency(@sum, :locale => 'jp') %></td>
         </tr>
       </table>
     </div>
 
   </div>
+
+  <%= link_to "注文詳細入力", new_order_path, class: "btn btn-success" %>
 
 </div>

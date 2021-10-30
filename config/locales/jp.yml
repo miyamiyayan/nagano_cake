@@ -6,3 +6,10 @@ jp:
         format: "%n%u"
         negative_format: "-%n%u"
         precision: 0
+        
+ja:
+  enums:
+    order:
+      payment_method:
+        credit_card: 'クレジットカード'
+        transfer: '銀行振込'
