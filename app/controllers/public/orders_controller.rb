@@ -3,12 +3,13 @@ class Public::OrdersController < ApplicationController
   def new
     @customer = Customer.find(current_customer.id)
     @order = Order.new
-    @sum = 0
   end
 
   def confirm
     @customer = Customer.find(current_customer.id)
     @cart_items = @customer.cart_items
+    @sum = 0
+    @item = Item.find(params[:id])
 
     if params[:order][:address_option] == "0"
         @order = Order.new(order_params)
@@ -30,6 +31,9 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
+    @order = Order.new(order_params)
+    @order.save
+    redirect_to orders_complete
   end
 
   def index

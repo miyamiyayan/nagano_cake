@@ -3,7 +3,7 @@
 
 <!--カート情報出力-->
   <div class="row">
-    <div class="col-xl-12">
+    <div class="col-xl-8">
       <table class="table">
         <thead>
           <tr>
@@ -26,17 +26,50 @@
           <% end %>
         </tbody>
       </table>
-
-  <div class="row">
+    </div>
     <div class="col-xl-4">
       <table class="table">
         <tr>
+          <th scope="col">送料</th>
+          <td scope="col">800円</td>
+        </tr>
+        <tr>
           <th scope="col">商品合計金額</th>
           <td scope="col"><%= number_to_currency(@sum, :locale => 'jp') %></td>
+        </tr>
+        <tr>
+          <th scope="col">請求金額</th>
+          <td scope="col"><%= number_to_currency((@sum + 800), :locale => 'jp') %></td>
         </tr>
       </table>
     </div>
   </div>
 
-
 <!--オーダー情報出力-->
+  <div>
+    <h3>支払方法</h3>
+      <%= @order.payment_method_i18n %>
+    <h3>お届け先</h3>
+      <%= @order.full_address %>
+  </div>
+
+<!--情報の保存-->
+<div>
+  <%= form_with model:@order, url:orders_path, local:true do |f| %>
+    <%= f.hidden_field :customer_id, value: @customer.id %>
+    <%= f.hidden_field :mailing_address_postal_code, value: @order.mailing_address_postal_code %>
+    <%= f.hidden_field :mailing_address, value: @order.mailing_address %>
+    <%= f.hidden_field :mailing_address_name, value: @order.mailing_address_name %>
+    <%= f.hidden_field :billing, value: @sum+800 %>
+    <%= f.hidden_field :postage, value: 800 %>
+    <%= f.hidden_field :payment_method, value: @order.payment_method %>
+    <%= f.hidden_field :status, value: 0 %>
+  <%= f.fields_for :order_details do |od| %>
+    <%= od.hidden_field :orde_id, value: @order.id %>
+    <%= od.hidden_field :item_id, value: @item.id %>
+    <%= od.hidden_field :price, value: cart_item.item.price %>
+    <%= od.hidden_field :amount, value: cart_item.amount %>
+  <% end %>
+  <%= f.submit '注文を確定する' %>
+  <% end %>
+</div>
