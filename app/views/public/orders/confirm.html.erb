@@ -64,12 +64,17 @@
     <%= f.hidden_field :postage, value: 800 %>
     <%= f.hidden_field :payment_method, value: @order.payment_method %>
     <%= f.hidden_field :status, value: 0 %>
-  <%= f.fields_for :order_details do |od| %>
-    <%= od.hidden_field :orde_id, value: @order.id %>
-    <%= od.hidden_field :item_id, value: @item.id %>
-    <%= od.hidden_field :price, value: cart_item.item.price %>
-    <%= od.hidden_field :amount, value: cart_item.amount %>
-  <% end %>
+
+      <%= f.fields_for :order_detail do |od| %>
+
+        <% @cart_items.each do |cart_item| %>
+          <%= od.hidden_field :order_id, value: @order.id %>
+          <%= od.hidden_field :price, value: cart_item.item.price %>
+          <%= od.hidden_field :amount, value: cart_item.amount %>
+        <% end %>
+
+      <% end %>
+
   <%= f.submit '注文を確定する' %>
   <% end %>
 </div>

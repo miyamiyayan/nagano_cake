@@ -6,10 +6,6 @@ class Public::OrdersController < ApplicationController
   end
 
   def confirm
-    @customer = Customer.find(current_customer.id)
-    @cart_items = @customer.cart_items
-    @sum = 0
-    @item = Item.find(params[:id])
 
     if params[:order][:address_option] == "0"
         @order = Order.new(order_params)
@@ -25,6 +21,11 @@ class Public::OrdersController < ApplicationController
     elsif params[:order][:address_option] == "2"
         @order = Order.new(order_params)
     end
+
+    @customer = Customer.find(current_customer.id)
+    @cart_items = @customer.cart_items
+    @sum = 0
+
   end
 
   def complete
@@ -33,6 +34,12 @@ class Public::OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.save
+    
+    binding.pry
+    
+    @order_detail = OrderDetail.new(order_detail_params)
+    @order_detail.save
+
     redirect_to orders_complete
   end
 
@@ -47,5 +54,9 @@ end
 private
 
 def order_params
-    params.require(:order).permit(:customer_id, :payment_method, :mailing_address_postal_code, :mailing_address, :mailing_address_name)
+    params.require(:order).permit(:customer_id, :payment_method, :mailing_address_postal_code, :mailing_address, :mailing_address_name, :billing, :postage, :status)
+end
+
+def order_detail_params
+    params.require(:order_detail).permit(:order_id, :price, :amount)
 end
