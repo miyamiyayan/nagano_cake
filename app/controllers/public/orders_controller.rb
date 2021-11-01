@@ -34,7 +34,7 @@ class Public::OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.save
-    
+
     @cart_items = current_customer.cart_items
     @cart_items.each do |cart_item|
       @order_detail = OrderDetail.new
@@ -45,8 +45,8 @@ class Public::OrdersController < ApplicationController
       @order_detail.amount = cart_item.amount
       @order_detail.save
     end
-
-    redirect_to orders_complete
+    @cart_items.destroy_all
+    redirect_to orders_complete_path
   end
 
   def index
