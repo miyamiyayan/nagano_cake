@@ -53,7 +53,7 @@
       <%= @order.full_address %>
   </div>
 
-<!--情報の保存-->
+<!--情報の保存、オーダーディティールについてはコントローラーで-->
 <div>
   <%= form_with model:@order, url:orders_path, local:true do |f| %>
     <%= f.hidden_field :customer_id, value: @customer.id %>
@@ -64,17 +64,6 @@
     <%= f.hidden_field :postage, value: 800 %>
     <%= f.hidden_field :payment_method, value: @order.payment_method %>
     <%= f.hidden_field :status, value: 0 %>
-
-      <%= f.fields_for :order_detail do |od| %>
-
-        <% @cart_items.each do |cart_item| %>
-          <%= od.hidden_field :order_id, value: @order.id %>
-          <%= od.hidden_field :price, value: cart_item.item.price %>
-          <%= od.hidden_field :amount, value: cart_item.amount %>
-        <% end %>
-
-      <% end %>
-
   <%= f.submit '注文を確定する' %>
   <% end %>
 </div>

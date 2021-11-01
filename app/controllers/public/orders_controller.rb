@@ -35,10 +35,16 @@ class Public::OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.save
     
-    binding.pry
-    
-    @order_detail = OrderDetail.new(order_detail_params)
-    @order_detail.save
+    @cart_items = current_customer.cart_items
+    @cart_items.each do |cart_item|
+      @order_detail = OrderDetail.new
+      @order_detail.order_id = @order.id
+      @order_detail.make_status = 0
+      @order_detail.item_id = cart_item.item_id
+      @order_detail.price = cart_item.item.price
+      @order_detail.amount = cart_item.amount
+      @order_detail.save
+    end
 
     redirect_to orders_complete
   end
@@ -58,5 +64,5 @@ def order_params
 end
 
 def order_detail_params
-    params.require(:order_detail).permit(:order_id, :price, :amount)
+    params.require(:order_detail).permit(:item_id, :price, :amount)
 end
