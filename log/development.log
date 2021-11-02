@@ -24094,3 +24094,1179 @@ Did you mean?  customers_url):
   
 app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb___2736985758574231754_70220872742340'
 app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb___2736985758574231754_70220872742340'
+Started GET "/" for 106.72.46.224 at 2021-11-02 13:41:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 773ms (Views: 760.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-02 13:41:54 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 140ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 106.72.46.224 at 2021-11-02 13:42:07 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 142ms (Views: 132.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/sign_in" for 106.72.46.224 at 2021-11-02 13:42:17 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BPDZhgXgpg833/38li888zvIuQR/W9s+3S/K9TUNaJAJwM98jtKlaPLbVyLita5OyF7plT06k3Cdyg5p8n0Lew==", "admin"=>{"email"=>"naganocake@aaa", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "naganocake@aaa"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://7caa0278f85c4f8f810ac599a5eb5fb9.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 327ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:42:18 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (521.8ms)
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x00007f38f186a1d8>:0x00007f38f18686a8>
+Did you mean?  customers_url):
+    22:       <% @orders.each do |order| %>
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= customer.full_name %></td>
+    26:           <td></td>
+    27:           <td></td>
+    28:         </tr>
+  
+app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941273515200'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941273515200'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:44:27 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 133ms (Views: 131.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:47:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (430.5ms)
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer_id' for #<#<Class:0x00007f38f10b5b90>:0x00007f38f10bcbc0>
+Did you mean?  customer_signed_in?):
+    22:       <% @orders.each do |order| %>
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= customer_id.full_name %></td>
+    26:           <td></td>
+    27:         </tr>
+    28:       <% end %>
+  
+app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941269477260'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941269477260'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:48:19 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for 1:Integer):
+    22:       <% @orders.each do |order| %>
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id.full_name %></td>
+    26:           <td></td>
+    27:         </tr>
+    28:       <% end %>
+  
+app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941282359260'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941282359260'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:49:05 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `last_name' for 1:Integer):
+    22:       <% @orders.each do |order| %>
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id.last_name %></td>
+    26:           <td></td>
+    27:         </tr>
+    28:       <% end %>
+  
+app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941282006400'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941282006400'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:50:36 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `last_name' for 1:Integer):
+    22:       <% @orders.each do |order| %>
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id.last_name %></td>
+    26:           <td></td>
+    27:         </tr>
+    28:       <% end %>
+  
+app/views/admin/homes/top.html.erb:25:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941328911140'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941328911140'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:52:25 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (3.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 143ms (Views: 141.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:53:34 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (287.8ms)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_detail' for #<#<Class:0x00007f38f10b5b90>:0x00007f38f1cca818>
+Did you mean?  order_url):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id %></td>
+    26:           <td><%= order_detail.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941275809840'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941275809840'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:54:06 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  Rendered admin/homes/top.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_detail' for #<Order:0x00007f38f8254f30>
+Did you mean?  order_details
+               order_details=):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id %></td>
+    26:           <td><%= order.order_detail.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941329085900'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941329085900'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:54:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered admin/homes/top.html.erb within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `amount' for #<ActiveRecord::Associations::CollectionProxy []>):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer_id %></td>
+    26:           <td><%= order.order_details.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_50287520'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_50287520'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:57:52 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `amount' for #<Class:0x00007f38f26a1e90>):
+  
+app/controllers/admin/homes_controller.rb:5:in `top'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:59:34 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+Completed 404 Not Found in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find OrderDetail without an ID):
+  
+app/controllers/admin/homes_controller.rb:5:in `top'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 13:59:59 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+Completed 404 Not Found in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find OrderDetail without an ID):
+  
+app/controllers/admin/homes_controller.rb:5:in `top'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:02:23 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (70.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 189ms (Views: 180.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:02:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (33.5ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_detail' for #<Order:0x00007f38f2978f88>
+Did you mean?  order_details
+               order_details=):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer.full_name %></td>
+    26:           <td><%= order.order_detail.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941282403620'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941282403620'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:04:01 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered admin/homes/top.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `amount' for #<ActiveRecord::Associations::CollectionProxy []>):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer.full_name %></td>
+    26:           <td><%= order.order_details.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941329760520'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941329760520'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:06:58 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (337.7ms)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_detail' for #<#<Class:0x00007f38f8192d18>:0x00007f38f1648df0>
+Did you mean?  order_url):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer.full_name %></td>
+    26:           <td><%= order_detail.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941272398780'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941272398780'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:08:41 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered admin/homes/top.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `amount' for #<ActiveRecord::Associations::CollectionProxy []>):
+    23:         <tr>
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer.full_name %></td>
+    26:           <td><%= order.order_details.amount %></td>
+    27:           <td></td>
+    28:         </tr>
+    29:       <% end %>
+  
+app/views/admin/homes/top.html.erb:26:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_69941275907540'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_69941275907540'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:10:09 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (28.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 139ms (Views: 136.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:10:11 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (29.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 147ms (Views: 145.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:11:14 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (2.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (25.4ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `statuses_i18n' for #<Order:0x0000000005fd9120>
+Did you mean?  status_i18n):
+    24:           <td><%= order.created_at %></td>
+    25:           <td><%= order.customer.full_name %></td>
+    26:           <td><%=  %></td>
+    27:           <td><%= order.statuses_i18n %></td>
+    28:           <td></td>
+    29:         </tr>
+    30:       <% end %>
+  
+app/views/admin/homes/top.html.erb:27:in `block in _app_views_admin_homes_top_html_erb__1882952926890727777_48684420'
+app/views/admin/homes/top.html.erb:22:in `_app_views_admin_homes_top_html_erb__1882952926890727777_48684420'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:11:37 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:25
+  Rendered admin/homes/top.html.erb within layouts/application (33.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 185ms (Views: 183.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:29:09 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  Rendered admin/homes/top.html.erb within layouts/application (113.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 4984ms (Views: 4958.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:29:19 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  Rendered admin/homes/top.html.erb within layouts/application (64.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 214ms (Views: 211.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/items" for 106.72.46.224 at 2021-11-02 14:29:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:26
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:35
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:35
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:35
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:35
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:35
+  Rendered admin/items/index.html.erb within layouts/application (38.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 179ms (Views: 167.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/customers" for 106.72.46.224 at 2021-11-02 14:29:24 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/admin/customers/index.html.erb:22
+  Rendered admin/customers/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:29:25 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:28
+  Rendered admin/homes/top.html.erb within layouts/application (36.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 149ms (Views: 147.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:30:39 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  Rendered admin/homes/top.html.erb within layouts/application (36.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 144ms (Views: 143.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/orders/1" for 106.72.46.224 at 2021-11-02 14:30:42 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Admin::OrdersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:30:43 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  Rendered admin/homes/top.html.erb within layouts/application (35.7ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 138ms (Views: 136.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/orders/1" for 106.72.46.224 at 2021-11-02 14:30:46 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Admin::OrdersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:30:47 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  Rendered admin/homes/top.html.erb within layouts/application (36.7ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 149ms (Views: 147.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/orders/9" for 106.72.46.224 at 2021-11-02 14:30:49 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"9"}
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (Admin::OrdersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin" for 106.72.46.224 at 2021-11-02 14:30:51 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/admin/homes/top.html.erb:22
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/homes/top.html.erb:30
+  Rendered admin/homes/top.html.erb within layouts/application (86.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:42
+Completed 200 OK in 223ms (Views: 221.7ms | ActiveRecord: 0.7ms)
+
+
