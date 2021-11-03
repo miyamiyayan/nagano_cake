@@ -1,0 +1,62 @@
+<h3>注文履歴詳細</h3>
+
+<p>購入者　<%= @order.customer.full_name %></p>
+<p>注文日　<%= @order.created_at %><</p>
+<p>発送先　<%= @order.customer.full_name %></p>
+<p>支払方法<%= @order.payment_method_i18n %></p>
+<p>注文ステータ
+  <%= form_with model: @order, url:admin_order_path(@order.id), method: :patch, local:true do |f| %>
+  <%#= f.select : Order.status_i18n %>
+  <%#= f.select :status, Order.statuses_i18n.keys, {prompt: "選択してください"} %>
+  <%= f.select :status, Order.statuses_i18n.keys.map{|k| [I18n.t("enums.order.status.#{k}"), k]} %>
+  <%= f.submit '変更' %>
+  <% end %>
+</p>
+
+ <div>
+  <table>
+    <thead>
+      <tr>
+        <th>商品名</th>
+        <th>単価（税込）</th>
+        <th>数量</th>
+        <th>小計</th>
+        <th>製作ステータス</th>
+      </tr>
+    </thead>
+<!--ここから下が可変-->
+    <tbody>
+      <% @order_details.each do |order_detail| %>
+        <tr>
+          <td><%= order_detail.item.name %></td>
+          <td><%= number_to_currency(order_detail.item.with_tax_price,  :locale => 'jp') %></td>
+          <td><%= order_detail.amount %></td>
+          <td><%= number_to_currency(order_detail.subtotal,  :locale => 'jp') %></td>
+          <td>
+            <%= form_with model: @order_detail, url:admin_order_path(order_detail.id), method: :patch, local:true do |f| %>
+            <%= f.select :make_status, OrderDetail.make_statuses_i18n.keys.map{|k| [I18n.t("enums.order_detail.make_status.#{k}"), k]} %>
+            <%= f.submit '変更' %>
+            <% end %>
+          </td>
+          <% @sum += order_detail.subtotal %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+ <table class="table">
+
+        <tr>
+          <th scope="col">商品合計金額</th>
+          <td scope="col"><%= number_to_currency(@sum, :locale => 'jp') %></td>
+        </tr>
+        <tr>
+          <th scope="col">送料</th>
+          <td scope="col">800円</td>
+        </tr>
+        <tr>
+          <th scope="col">請求金額</th>
+          <td scope="col"><%= number_to_currency((@sum + 800), :locale => 'jp') %></td>
+        </tr>
+      </table>

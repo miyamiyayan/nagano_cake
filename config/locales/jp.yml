@@ -13,13 +13,15 @@ ja:
       payment_method:
         credit_card: 'クレジットカード'
         transfer: '銀行振込'
-
-ja:
-  enums:
-    order:
       status:
         nyukin: '入金待ち'
         kakunin: '入金確認'
         sakusei: '作成中'
         hassoumae: '発送準備中'
         hassouzumi: '発送済み'
+    order_detail:
+      make_status:
+        huka: '製作不可'
+        mati: '製作待ち'
+        seisaku: '製作中'
+        seisakuok: '製作完了'
