@@ -71,7 +71,7 @@
           </ul>
 
  <!--実験　検索機能-->
-          <ul class="pull-right">
+          <ul>
             <il class="search-form">
               <%= form_with url: search_path, method: :get, local: true do |f| %>
               <%= f.text_field :keyword, value: @keyword %>
@@ -93,11 +93,11 @@
   <%= yield %>
   </main>
 
-  <footer>
+  <footer class="border-top border-dark">
     <div class="container mt-5">
       <div class="row">
         <div class="mx-auto">
-          <p>footer</p>
+          <p>ながのケーキ</p>
         </div>
       </div>
     </div>

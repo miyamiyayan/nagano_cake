@@ -2,6 +2,16 @@
 
 class Public::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+  before_action :reject_inactive_user, only: [:create]
+
+  def reject_inactive_user
+    @customer = Customer.find_by(email: params[:customer][:email])
+    if @customer
+      if @customer.valid_password?(params[:customer][:password]) && !@customer.is_active
+        redirect_to new_customer_registration_path
+      end
+    end
+  end
 
   # GET /resource/sign_in
   # def new
