@@ -6,8 +6,12 @@ class Item < ApplicationRecord
     belongs_to :genre
 
 
-def with_tax_price
-    (price.to_i * 1.1).floor
-end
+    def with_tax_price
+      (price.to_i * 1.1).floor
+    end
+
+    def self.search(keyword)
+      where(["name like?", "%#{keyword}%"])
+    end
 
 end

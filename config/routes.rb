@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 # トップとアバウト
   root to: 'public/homes#top'
   get "/about" => 'public/homes#about'
+  get 'search' => 'application#search'
 # マイページと編集
   get "/customers/" => 'public/customers#show'
   get "/customers/edit" => 'public/customers#edit'
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
     resources :items, except: [:destroy]
     resources :customers, except: [:create, :destroy, :new]
     resources :orders, only:[:show, :update]
+    resources :order_details, only:[:update]
 
   end
 

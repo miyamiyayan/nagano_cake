@@ -1,18 +1,19 @@
 <div class="container-xl">
 
   <div class="row">
-    <div class="col-xl-10">
-      <h3>商品一覧</h3>
-    </div>
     <div class="col-xl-2">
-      <%= link_to "商品追加", new_admin_item_path, class: "btn btn-primary" %>
+      <h3 class="bg-light text-dark text-center">商品一覧</h3>
+    </div>
+    <div class="col-xl-8"></div>
+    <div class="col-xl-2 text-right">
+      <%= link_to "商品追加", new_admin_item_path, class: "btn btn-success" %>
     </div>
   </div>
 
 <!--商品一覧-->
   <div>
   <table class="table">
-    <thead>
+    <thead class="table-secondary">
       <tr>
         <th scope="col">商品ID</th>
         <th scope="col">商品名</th>
@@ -38,6 +39,7 @@
       <% end %>
     </tbody>
   </table>
+  <div class="d-flex justify-content-center"><%= paginate @items %></div>
 </div>
 
 
