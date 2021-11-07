@@ -1,38 +1,50 @@
-<h3>ジャンル一覧・追加</h3>
-
 <!--エラーメッセージ-->
 <% if @genre.errors.any? %>
-  <%= @genre.errors.count %>件のerrorが発生しました
+  <%= @genre.errors.count %>件のerrorが発生しました。</br>
   <% @genre.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
 
-<!--ジャンル登録-->
-<div>
-  <%= form_with model:@genre, url:admin_genres_path, local:true do |f| %>
-    <div>
-      <%= f.label 'ジャンル名' %>
-      <%= f.text_field :name %>
-      <%= f.submit '新規登録' %>
+<div class="container-xl">
+
+  <div class="row">
+    <div class="col-xl-3">
+      <h3 class="bg-light text-dark text-center">ジャンル一覧・追加</h3>
     </div>
-  <% end %>
-</div>
+  </div>
+
+<!--ジャンル登録-->
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-10">
+      <%= form_with model:@genre, url:admin_genres_path, local:true do |f| %>
+
+        <div class="form-group row">
+          <%= f.label :name, "ジャンル名", class: 'col-xl-2 col-form-label' %>
+          <%= f.text_field :name, :placeholder => "ジャンルを入力", class: 'col-xl-4 col-form-label'  %>
+          <span class="col-sm-1" ></span>
+          <%= f.submit '変更を保存', class: "col-xl-2 col-form-label btn btn-success" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 <!--ジャンル一覧表示-->
-<div>
-  <table>
-    <thead>
-      <tr>
-        <th>ジャンル</th>
-        <th colspan="1"></th>
-      </tr>
-    </thead>
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <table class="table col-xl-5">
+      <thead class="table-secondary">
+        <tr>
+          <th style="width: 70%" scope="col">ジャンル</th>
+          <th style="width: 30%" colspan="1"></th>
+        </tr>
+      </thead>
 <!--ここから下が可変-->
     <tbody>
       <% @genres.each do |genre| %>
         <tr>
-          <td>
+          <td class="align-middle">
             <%= genre.name %>
           </td>
           <td>
@@ -42,4 +54,8 @@
       <% end %>
     </tbody>
   </table>
+  </div>
+  <div class="d-flex justify-content-center h6"><%= paginate @genres %></div>
+  </br
+  
 </div>

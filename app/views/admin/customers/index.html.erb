@@ -1,27 +1,28 @@
 <div class="container-xl">
 
   <div class="row">
-    <div class="col-xl-10">
-      <h3>会員一覧</h3>
+    <div class="col-xl-2">
+      <h3 class="bg-light text-dark text-center">会員一覧</h3>
     </div>
   </div>
 
 <!--会員一覧-->
-  <div>
-  <table>
-    <thead>
+  <div class="row">
+    <div class="col-xl-1"></div>
+  <table class="table col-xl-10">
+    <thead class="table-secondary">
       <tr>
-        <th>会員ID</th>
-        <th>氏名</th>
-        <th>メールアドレス</th>
-        <th>ステータス</th>
+        <th style="width: 10%" scope="col">会員ID</th>
+        <th style="width: 35%" scope="col">氏名</th>
+        <th style="width: 35%" scope="col">メールアドレス</th>
+        <th style="width: 20%" scope="col">ステータス</th>
       </tr>
     </thead>
 <!--ここから下が可変-->
     <tbody>
       <% @customers.each do |customer| %>
         <tr>
-          <td><%= customer.id %></td>
+          <th scope="col"><%= customer.id %></th>
           <td>
             <%= link_to admin_customer_path(customer.id) do %>
               <%= customer.full_name %>
@@ -33,7 +34,7 @@
       <% end %>
     </tbody>
   </table>
-  <%= paginate @customers %>
+  <div class="d-flex justify-content-center h6"><%= paginate @customers %></div>
 </div>
 
 
