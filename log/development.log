@@ -47077,3 +47077,700 @@ Processing by Admin::ItemsController#index as HTML
 Completed 200 OK in 128ms (Views: 125.3ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:21:42 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 880ms (Views: 862.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 106.72.46.224 at 2021-11-07 05:26:56 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:16
+  Rendered public/items/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 148ms (Views: 135.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/attachments/6e72c07c3e2c98356c1eb9b93f74529db25835a4/store/fill/100/100/28698b81116dcd6aa99344a5861886ee7402f7ed1724dbc1cf1f5f639ff0/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/8494a47c9451f5773d8a91df56a78e38939775f0/store/fill/100/100/982a654c6889ffdc737683b091655553424445832ccc7a915e11c35055e0/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/91170120f669316230e6c98900f442d2b22e9dc6/store/fill/100/100/9b6d753c65e8ad9711569b404ba7af8b6dd0a195c7bed5341c0d7623d770/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/4cdc1936f8a39fa9c57391b0c33e1fe28945156d/store/fill/100/100/c05278931a07c61ddc3e4b4977fed8e706bed4449ea955cb721176d6befd/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/f1dc122c862a9750b8b8143d8ded09bfabb3cb7c/store/fill/100/100/aa5836d9510e62bf36ee42683a969e6e1043dc6e13d3f9eb925ebe777bdd/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/4cdc1936f8a39fa9c57391b0c33e1fe28945156d/store/fill/100/100/c05278931a07c61ddc3e4b4977fed8e706bed4449ea955cb721176d6befd/image.jpeg" 200 134.2ms
+
+Started GET "/attachments/fc28417fac157b65247b820320e1af3bb845e05a/store/fill/100/100/1e28efcbceea0f35985299c796665ff02fff529023840388da229bc72b05/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/91170120f669316230e6c98900f442d2b22e9dc6/store/fill/100/100/9b6d753c65e8ad9711569b404ba7af8b6dd0a195c7bed5341c0d7623d770/image.jpeg" 200 149.7ms
+
+Started GET "/attachments/d657b419ed23cff0d8306e7f73bbec61a8e15c1b/store/fill/100/100/669baae76d79b946f4b429750da94839dd9fcce3f82b2ae3002ef923fc3d/image.jpeg" for 106.72.46.224 at 2021-11-07 05:26:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/8494a47c9451f5773d8a91df56a78e38939775f0/store/fill/100/100/982a654c6889ffdc737683b091655553424445832ccc7a915e11c35055e0/image.jpeg" 200 162.7ms
+
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/6e72c07c3e2c98356c1eb9b93f74529db25835a4/store/fill/100/100/28698b81116dcd6aa99344a5861886ee7402f7ed1724dbc1cf1f5f639ff0/image.jpeg" 200 160.3ms
+
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/f1dc122c862a9750b8b8143d8ded09bfabb3cb7c/store/fill/100/100/aa5836d9510e62bf36ee42683a969e6e1043dc6e13d3f9eb925ebe777bdd/image.jpeg" 200 140.3ms
+
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/fc28417fac157b65247b820320e1af3bb845e05a/store/fill/100/100/1e28efcbceea0f35985299c796665ff02fff529023840388da229bc72b05/image.jpeg" 200 45.4ms
+
+Refile::App: [2021-11-07 05:26:57 +0000] GET "/d657b419ed23cff0d8306e7f73bbec61a8e15c1b/store/fill/100/100/669baae76d79b946f4b429750da94839dd9fcce3f82b2ae3002ef923fc3d/image.jpeg" 200 40.6ms
+
+Started GET "/items" for 106.72.46.224 at 2021-11-07 05:28:32 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/items/index.html.erb:16
+  Rendered public/items/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 159ms (Views: 152.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:29:14 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 182ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:35:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered public/homes/top.html.erb within layouts/application (508.6ms)
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x00007f98e07b04c8>:0x00007f98e07be550>
+Did you mean?  @genres):
+    10:       <tbody>
+    11:         <% @genres.each do |order| %>
+    12:           <tr>
+    13:             <td><%= genre.name %></td>
+    14:           </tr>
+    15:         <% end %>
+    16:       </tbody>
+  
+app/views/public/homes/top.html.erb:13:in `block in _app_views_public_homes_top_html_erb___1102878834458529529_70147288958520'
+app/views/public/homes/top.html.erb:11:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147288958520'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:36:31 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered public/homes/top.html.erb within layouts/application (418.0ms)
+Completed 500 Internal Server Error in 423ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x00007f98e07b04c8>:0x00007f98cd8f1188>):
+    10:       <tbody>
+    11:         <% @genres.each do |order| %>
+    12:           <tr>
+    13:             <td><%= name %></td>
+    14:           </tr>
+    15:         <% end %>
+    16:       </tbody>
+  
+app/views/public/homes/top.html.erb:13:in `block in _app_views_public_homes_top_html_erb___1102878834458529529_70147130232100'
+app/views/public/homes/top.html.erb:11:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147130232100'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:36:49 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  Rendered public/homes/top.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for nil:NilClass):
+    15:         <% end %>
+    16:       </tbody>
+    17:     </table>
+    18:     <div class="d-flex justify-content-center h6"><%= paginate @orders %></div>
+    19: 
+    20:       
+    21:     </div>
+  
+app/views/public/homes/top.html.erb:18:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147285783620'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:37:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 164ms (Views: 162.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:37:55 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  Rendered public/homes/top.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    10:       <tbody>
+    11:         <% @genres.each do |order| %>
+    12:           <tr>
+    13:             <td><%= @genre.name %></td>
+    14:           </tr>
+    15:         <% end %>
+    16:       </tbody>
+  
+app/views/public/homes/top.html.erb:13:in `block in _app_views_public_homes_top_html_erb___1102878834458529529_70147133759600'
+app/views/public/homes/top.html.erb:11:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147133759600'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:38:09 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered public/homes/top.html.erb within layouts/application (328.6ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x00007f98e07b04c8>:0x00007f98e08f2430>
+Did you mean?  @genres):
+    10:       <tbody>
+    11:         <% @genres.each do |order| %>
+    12:           <tr>
+    13:             <td><%= genre.name %></td>
+    14:           </tr>
+    15:         <% end %>
+    16:       </tbody>
+  
+app/views/public/homes/top.html.erb:13:in `block in _app_views_public_homes_top_html_erb___1102878834458529529_70147289618000'
+app/views/public/homes/top.html.erb:11:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147289618000'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:38:22 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered public/homes/top.html.erb within layouts/application (393.0ms)
+Completed 500 Internal Server Error in 399ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genres' for #<#<Class:0x00007f98e07b04c8>:0x00007f98e017ec58>
+Did you mean?  @genres):
+    10:       <tbody>
+    11:         <% @genres.each do |order| %>
+    12:           <tr>
+    13:             <td><%= genres.name %></td>
+    14:           </tr>
+    15:         <% end %>
+    16:       </tbody>
+  
+app/views/public/homes/top.html.erb:13:in `block in _app_views_public_homes_top_html_erb___1102878834458529529_70147285711560'
+app/views/public/homes/top.html.erb:11:in `_app_views_public_homes_top_html_erb___1102878834458529529_70147285711560'
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:39:04 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 105ms (Views: 103.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:39:45 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 107ms (Views: 105.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:39:48 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:42:34 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 123ms (Views: 121.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:43:27 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 110ms (Views: 108.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:43:56 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:17
+  Rendered public/homes/top.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 115ms (Views: 114.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:44:55 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?page=2" for 106.72.46.224 at 2021-11-07 05:45:49 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Parameters: {"page"=>"2"}
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/public/homes/top.html.erb:12
+  Rendered public/homes/top.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 112ms (Views: 110.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:54:43 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:56:09 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:56:48 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:58:41 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 05:59:44 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 102ms (Views: 100.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:01:10 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 125ms (Views: 122.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:02:47 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 103ms (Views: 101.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:02:58 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:05:00 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 118ms (Views: 116.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:05:30 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  Rendered public/homes/top.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 127ms (Views: 125.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:10:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (8.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:36
+  Rendered public/homes/top.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 220ms (Views: 190.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:14:00 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:39
+  Rendered public/homes/top.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/9769a3c0ec7074b7d6b8689f34faa73f4cc50ef6/store/fill/50/50/d2b68c8c61d8c204e1350144cc30eb11453f6ec4fbf3e0b52aba9af164e2/image.jpeg" for 106.72.46.224 at 2021-11-07 06:14:00 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/7dda5e523555f80789c6668166db82e031c157f7/store/fill/50/50/57c1c17e500b7189c37a297ff4cef8b5ffd148e7c8fadf0dcc9db0c356b2/image.jpeg" for 106.72.46.224 at 2021-11-07 06:14:00 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 06:14:00 +0000] GET "/7dda5e523555f80789c6668166db82e031c157f7/store/fill/50/50/57c1c17e500b7189c37a297ff4cef8b5ffd148e7c8fadf0dcc9db0c356b2/image.jpeg" 200 79.5ms
+
+Refile::App: [2021-11-07 06:14:00 +0000] GET "/9769a3c0ec7074b7d6b8689f34faa73f4cc50ef6/store/fill/50/50/d2b68c8c61d8c204e1350144cc30eb11453f6ec4fbf3e0b52aba9af164e2/image.jpeg" 200 136.7ms
+
+Started GET "/attachments/2b17e3f0d2f401bdd3c698b9c1ffffb721e2e966/store/fill/50/50/1921ef3aeb042681da112052710b29193ff2f9555f82937c3f12f6e32280/image.jpeg" for 106.72.46.224 at 2021-11-07 06:14:00 +0000
+Started GET "/attachments/e2ee6eacc29d34668960d1f20d482cecd34f4941/store/fill/50/50/7f64f3e1b62a2741f0eaa5027c0ded94ece3963edad90a44f035685870d1/image.jpeg" for 106.72.46.224 at 2021-11-07 06:14:00 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 06:14:00 +0000] GET "/2b17e3f0d2f401bdd3c698b9c1ffffb721e2e966/store/fill/50/50/1921ef3aeb042681da112052710b29193ff2f9555f82937c3f12f6e32280/image.jpeg" 200 27.7ms
+
+Refile::App: [2021-11-07 06:14:00 +0000] GET "/e2ee6eacc29d34668960d1f20d482cecd34f4941/store/fill/50/50/7f64f3e1b62a2741f0eaa5027c0ded94ece3963edad90a44f035685870d1/image.jpeg" 200 38.6ms
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:16:28 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 123ms (Views: 121.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:16:57 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:18:29 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 127ms (Views: 125.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:21:52 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 150ms (Views: 136.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:26:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/8f48807aa40f94e63f1e502d6f4f13ff980cb08b/store/fill/80/60/d2b68c8c61d8c204e1350144cc30eb11453f6ec4fbf3e0b52aba9af164e2/image.jpeg" for 106.72.46.224 at 2021-11-07 06:26:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/25fb2fa9107e3a2308e5d876c08af9869f29061c/store/fill/80/60/57c1c17e500b7189c37a297ff4cef8b5ffd148e7c8fadf0dcc9db0c356b2/image.jpeg" for 106.72.46.224 at 2021-11-07 06:26:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 06:26:20 +0000] GET "/8f48807aa40f94e63f1e502d6f4f13ff980cb08b/store/fill/80/60/d2b68c8c61d8c204e1350144cc30eb11453f6ec4fbf3e0b52aba9af164e2/image.jpeg" 200 35.3ms
+
+Refile::App: [2021-11-07 06:26:20 +0000] GET "/25fb2fa9107e3a2308e5d876c08af9869f29061c/store/fill/80/60/57c1c17e500b7189c37a297ff4cef8b5ffd148e7c8fadf0dcc9db0c356b2/image.jpeg" 200 19.3ms
+
+Started GET "/attachments/e7ceaf8b19126627d1f1fc4dad0755acfbbbbcec/store/fill/80/60/1921ef3aeb042681da112052710b29193ff2f9555f82937c3f12f6e32280/image.jpeg" for 106.72.46.224 at 2021-11-07 06:26:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/788c34362b4e5d3e87ee4959becda0eee6fdb541/store/fill/80/60/7f64f3e1b62a2741f0eaa5027c0ded94ece3963edad90a44f035685870d1/image.jpeg" for 106.72.46.224 at 2021-11-07 06:26:20 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-07 06:26:20 +0000] GET "/e7ceaf8b19126627d1f1fc4dad0755acfbbbbcec/store/fill/80/60/1921ef3aeb042681da112052710b29193ff2f9555f82937c3f12f6e32280/image.jpeg" 200 30.4ms
+
+Refile::App: [2021-11-07 06:26:20 +0000] GET "/788c34362b4e5d3e87ee4959becda0eee6fdb541/store/fill/80/60/7f64f3e1b62a2741f0eaa5027c0ded94ece3963edad90a44f035685870d1/image.jpeg" 200 38.6ms
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:28:07 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 126ms (Views: 125.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:31:05 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 114ms (Views: 112.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 106.72.46.224 at 2021-11-07 06:32:33 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:18
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/public/homes/top.html.erb:40
+  Rendered public/homes/top.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 122ms (Views: 120.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 106.72.46.224 at 2021-11-07 06:42:42 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#about as HTML
+  Rendering public/homes/about.html.erb within layouts/application
+  Rendered public/homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 92ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 106.72.46.224 at 2021-11-07 06:43:06 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#about as HTML
+  Rendering public/homes/about.html.erb within layouts/application
+  Rendered public/homes/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 106.72.46.224 at 2021-11-07 06:43:32 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#about as HTML
+  Rendering public/homes/about.html.erb within layouts/application
+  Rendered public/homes/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 155ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 106.72.46.224 at 2021-11-07 06:45:15 +0000
+Cannot render console from 106.72.46.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/public/items/index.html.erb:16
+  Rendered public/items/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.3ms)
+
+
