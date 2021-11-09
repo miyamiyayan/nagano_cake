@@ -1,95 +1,81 @@
 <div class="container-xl">
-
   <div class="row">
-    <div class="col-xl-6">
-      <h3>新規会員登録</h3>
+    <div class="col-xl-1"></div>
+    <div class="col-xl-5">
+      <h3 class="bg-light text-dark text-center">新規会員登録</h3>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xl-6">
-      <h4>会員の方はこちらからログイン</h4>
-    </div>
-  </div>
-
+  </br>
 
   <div class="row">
-    <div class="col-xl-3"></div>
-
-    <div class="col-xl-9">
+    <div class="col-xl-2"></div>
+    <div class="col-xl-10">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "public/shared/error_messages", resource: resource %>
 
-
-        <div>
-          <p>名前(姓)<%= f.text_field :last_name, :placeholder => "令和" %>(名)<%= f.text_field :first_name, :placeholder => "道子" %></p>
+        <div class="form-group row">
+          <%= f.label :last_name, "名前", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :last_name, :placeholder => "苗字", class: 'col-xl-3 col-form-label'  %>
+            <span class="col-sm-1" ></span>
+          <%= f.text_field :first_name, :placeholder => "名前", class: 'col-xl-3 col-form-label'  %>
         </div>
-
-        <div>
-          <p>フリガナ(セイ)<%= f.text_field :last_name_kana, :placeholder => "レイワ" %>(メイ)<%= f.text_field :first_name_kana, :placeholder => "ミチコ" %></p>
+        <div class="form-group row">
+          <%= f.label :last_name_kana, "フリガナ", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :last_name_kana, :placeholder => "フリ", class: 'col-xl-3 col-form-label'  %>
+            <span class="col-sm-1" ></span>
+          <%= f.text_field :first_name_kana, :placeholder => "カナ", class: 'col-xl-3 col-form-label'  %>
         </div>
-
-        <div class="row">
-          <div class="col-xl-2">
-            <label>メールアドレス</label>
-          </div>
-          <div class="col-xl-10">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-          </div>
+        <div class="form-group row">
+          <%= f.label :email, "メールアドレス", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :email, :placeholder => "〇〇〇〇＠〇〇〇〇", class: 'col-xl-5 col-form-label'  %>
         </div>
-
-        <div>
-          <p>郵便番号（ハイフンなし）<%= f.text_field :postal_code, :placeholder => "0000000" %></p>
+        <div class="form-group row">
+          <%= f.label :postal_code, "郵便番号（ハイフンなし）", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :postal_code, :placeholder => "0000000", class: 'col-xl-3 col-form-label'  %>
         </div>
-
-        <div>
-          <p>住所<%= f.text_field :address, :placeholder => "東京都渋谷区〇〇" %></p>
+        <div class="form-group row">
+          <%= f.label :address, "住所", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :address, :placeholder => "〇〇県××市（建物名まで）", class: 'col-xl-7 col-form-label'  %>
         </div>
-
-        <div>
-          <p>電話番号（ハイフンなし）<%= f.text_field :telephone_number, :placeholder => "0000000000" %></p>
+        <div class="form-group row">
+          <%= f.label :telephone_number, "電話番号", class: 'col-xl-3 col-form-label' %>
+          <%= f.text_field :telephone_number, :placeholder => "000-0000-0000", class: 'col-xl-3 col-form-label'  %>
         </div>
-
-        <div class="row">
-          <div class="col-xl-2">
-            <label>パスワード（６文字以上）</label>
-          </div>
-          <div class="col-xl-10">
+        <div class="form-group row">
+          <%= f.label :password, "パスワード（６文字以上）", class: 'col-xl-3 col-form-label' %>
             <% if @minimum_password_length %>
             <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password" %>
-          </div>
+            <%= f.password_field :password, autocomplete: "new-password", class: 'col-xl-3 col-form-label' %>
         </div>
-
-        <div class="row">
-          <div class="col-xl-2">
-            <label>パスワード（確認用）</label>
-          </div>
-          <div class="col-xl-10">
-                <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-          </div>
+        <div class="form-group row">
+          <%= f.label :password_confirmation, "パスワード（確認用）", class: 'col-xl-3 col-form-label' %>
+           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'col-xl-3 col-form-label' %>
         </div>
-    </br>
         <div class="row">
-          <div class="col-xl-2">
-          </div>
-          <div class="col-xl-10">
-          <%= f.submit "新規登録", class: "btn btn-primary" %>
+          <div class="col-xl-3"></div>
+          <div class="col-xl-3">
+            <%= f.submit "新規登録", class: "btn btn-success " %>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xl-6">
-      <h4>既に登録済みの方</h4>
-    </div>
-  </div>
+  </br>
 
   <div class="row">
-    <div class="col-xl-6">
-      <p><%= link_to "こちら", new_customer_session_path %> からログインしてください。</p>
+    <div class="col-xl-1"></div>
+    <div class="col-xl-5">
+      <h3 class="bg-light text-dark text-center">既に登録済みの方</h3>
     </div>
   </div>
+  </br>
+  <div class="row">
+    <div class="col-xl-2"></div>
+    <div class="col-xl-8 text-center">
+      <h6><%= link_to "こちら", new_customer_session_path %> からログインしてください。</h6>
+    </div>
+  </div>
+  </br>
 </div>
