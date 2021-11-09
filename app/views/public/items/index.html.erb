@@ -1,35 +1,51 @@
 <div class="container-xl">
 
   <div class="row">
-    <div class="col-xl-10">
-      <h3>商品一覧</h3>
-    </div>
+    <div class="col-xl-3"></div>
+    <div class="col-xl-9 h3">商品一覧</div>
   </div>
 
   <div class="row">
-    <div class="col-md-3"></div>
-
-  <div class="col-md-9">
-
+    <table class="table col-xl-2">
+      <thead class="table-secondary">
+        <tr>
+          <th scope="col">ジャンル検索</th>
+        </tr>
+      </thead>
+<!--ここから下が可変-->
+      <tbody>
+        <% @genres.each do |genre| %>
+          <tr>
+            <td><%= genre.name %></td>
+          </tr>
+        <% end %>
+          <td>
+            <div class="d-flex justify-content-center h6"><%= paginate @genres %></div>
+          </td>
+      </tbody>
+    </table>
+    <div class="col-xl-1"></div>
+    <div class="col-xl-9">
 <!--商品一覧-->
-    <div class="row">
-      <% @items.each do |item| %>
-      <div  class="col-md-3">
-        <div>
-          <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
+      <div class="row">
+        <% @items.each do |item| %>
+        <div  class="col-xl-3">
+          <div>
+            <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
+          </div>
+          <div>
+            <%= link_to item_path(item.id) do %>
+              <%= item.name %>
+            <% end %>
+          </br>
+            <%= number_to_currency(item.price,  :locale => 'jp') %>
+          </div>
+
         </div>
-        <div>
-          <%= link_to item_path(item.id) do %>
-            <%= item.name %>
-          <% end %>
-        </br>
-          <%= number_to_currency(item.price,  :locale => 'jp') %>
-        </div>
+        <% end %>
       </div>
-      <% end %>
+      <div class="d-flex justify-content-center h6"><%= paginate @items %></div>
     </div>
   </div>
-</div>
-
-
+  </br>
 </div>
