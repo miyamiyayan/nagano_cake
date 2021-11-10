@@ -6,10 +6,14 @@
     </div>
   </div>
 
+  </br>
+
   <div class="row">
     <div class="col-xl-2 h3">登録情報</div>
     <div class="col-xl-3"><%= link_to "編集する", customers_edit_path, class: "btn btn-success" %></div>
   </div>
+
+  </br>
 
   <div class="row">
     <div class="col-xl-8">
@@ -24,7 +28,7 @@
         </tr>
         <tr>
           <th scope="col",class="col-xl-3">郵便番号</th></th>
-          <td class="col-xl-9"><<%= @customer.postal_code %></td>
+          <td class="col-xl-9"><%= @customer.postal_code %></td>
         </tr>
         <tr>
           <th scope="col",class="col-xl-3">メールアドレス</th>
@@ -35,13 +39,18 @@
           <td class="col-xl-9"><%= @customer.last_name %> <%= @customer.first_name %></td>
         </tr>
       </table>
-
-  <div>
-    <h3>配送先</h3>
-      <%= link_to "一覧を見る", addresses_path, class: "btn btn-primary" %>
+    </div>
   </div>
 
-  <div>
-    <h3>注文履歴</h3>
-      <%= link_to "一覧を見る", customers_edit_path, class: "btn btn-primary" %>
+  </br>
+
+  <div class="row">
+    <div class="col-xl-2 h3">配送先</div>
+    <div class="col-xl-2"><%= link_to "一覧を見る", addresses_path, class: "btn btn-primary" %></div>
   </div>
+  </br>
+  <div class="row">
+    <div class="col-xl-2 h3">注文履歴</div>
+    <div class="col-xl-2"><%= link_to "一覧を見る", customers_edit_path, class: "btn btn-primary" %></div>
+  </div>
+</div>
