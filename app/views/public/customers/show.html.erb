@@ -1,28 +1,40 @@
-<h1>マイページ</h1>
-
-  <div>
-    <h3>登録情報</h3>
-      <%= link_to "編集する", customers_edit_path, class: "btn btn-primary" %>
+<div class="container-xl">
+  <div class="row">
+    <div class="col-xl-1"></div>
+    <div class="col-xl-3">
+      <h3 class="bg-light text-dark text-center">マイページ</h3>
+    </div>
   </div>
 
-  <div>
-    <p>氏名<%= @customer.last_name %> <%= @customer.first_name %></p>
+  <div class="row">
+    <div class="col-xl-2 h3">登録情報</div>
+    <div class="col-xl-3"><%= link_to "編集する", customers_edit_path, class: "btn btn-success" %></div>
   </div>
-  <div>
-    <p>フリガナ<%= @customer.last_name_kana %> <%= @customer.first_name_kana %></p>
-  </div>
-  <div>
-    <p>郵便番号<%= @customer.postal_code %></p>
-  </div>
-  <div>
-    <p>住所<%= @customer.address %></p>
-  </div>
-  <div>
-    <p>電話番号<%= @customer.telephone_number %></p>
-  </div>
-  <div>
-    <p>メールアドレス<%= @customer.email %></p>
-  </div>
+
+  <div class="row">
+    <div class="col-xl-8">
+      <table class="table col-xl-12">
+        <tr>
+          <th scope="col",class="col-xl-3">氏名</th>
+          <td class="col-xl-9"><%= @customer.last_name %> <%= @customer.first_name %></td>
+        </tr>
+        <tr>
+          <th scope="col",class="col-xl-3">フリガナ</th>
+          <td class="col-xl-9"><%= @customer.last_name_kana %> <%= @customer.first_name_kana %></td>
+        </tr>
+        <tr>
+          <th scope="col",class="col-xl-3">郵便番号</th></th>
+          <td class="col-xl-9"><<%= @customer.postal_code %></td>
+        </tr>
+        <tr>
+          <th scope="col",class="col-xl-3">メールアドレス</th>
+          <td class="col-xl-9"><%= @customer.email %></td>
+        </tr>
+        <tr>
+          <th scope="col",class="col-xl-3">氏名</th>
+          <td class="col-xl-9"><%= @customer.last_name %> <%= @customer.first_name %></td>
+        </tr>
+      </table>
 
   <div>
     <h3>配送先</h3>
