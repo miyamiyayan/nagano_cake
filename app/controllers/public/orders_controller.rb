@@ -3,6 +3,7 @@ class Public::OrdersController < ApplicationController
   def new
     @customer = Customer.find(current_customer.id)
     @order = Order.new
+    @addresses = Address.where(customer_id: current_customer.id)
   end
 
   def confirm
