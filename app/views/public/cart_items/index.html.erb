@@ -30,7 +30,7 @@
               <%= attachment_image_tag cart_item.item, :image, :fill, 100, 60, format: 'jpeg' %>　<%= cart_item.item.name %>
             </td>
             <td class="p-2">
-              <%= number_to_currency(cart_item.item.with_tax_price,  :locale => 'jp') %>
+              <%= number_to_currency(cart_item.item.with_tax_price, :locale => 'jp') %>
             </td>
             <td class="p-2">
               <%= form_with model:CartItem, url:cart_item_path(cart_item.id), method: :patch, local:true do |f| %>

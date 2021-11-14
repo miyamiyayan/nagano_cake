@@ -1,0 +1,53 @@
+<div class="container-xl mb-3">
+
+  <div class="row mb-3">
+    <div class="col-xl-3">
+      <h3 class="bg-light text-dark text-center">注文履歴一覧</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <table class="col-xl-12 table-bordered mb-3">
+        <thead class="table-secondary">
+          <tr>
+            <th style="width: 10%" scope="col">注文日</th>
+            <th style="width: 40%" scope="col">配送先</th>
+            <th style="width: 20%" scope="col">注文商品</th>
+            <th style="width: 10%" scope="col">支払金額</th>
+            <th style="width: 10%" scope="col">ステータス</th>
+            <th style="width: 10%" scope="col">注文詳細</th>
+          </tr>
+        </thead>
+<!--ここから下が可変-->
+        <tbody>
+          <% @orders.each do |order| %>
+          <tr scope="col">
+            <td>
+              <%= order.created_at.strftime('%Y/%m/%d') %>
+            </td>
+            <td>
+              <p class="mb-0">
+                〒<%= order.mailing_address_postal_code %><br>
+                <%= order.mailing_address %><br>
+                <%= order.mailing_address_name %>
+              </p>
+            </td>
+            <td>
+            </td>
+            <td>
+              <%= number_to_currency(order.billing, :locale => 'jp') %>
+            </td>
+            <td>
+              <%= order.status_i18n %>
+            </td>
+            <td>
+              <%= link_to "表示する", order_path(order.id), class: "btn btn-primary d-flex justify-content-center" %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

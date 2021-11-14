@@ -1,0 +1,87 @@
+<div class="container-xl mb-5">
+  <div class="row mb-3">
+    <div class="col-xl-3">
+      <h3 class="bg-light text-dark text-center">注文履歴詳細</h3>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-xl-3">
+      <h5>注文情報</h5>
+    </div>
+    <div class="col-xl-5"></div>
+    <div class="col-xl-4">
+      <h5>請求情報</h5>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-xl-8">
+      <table class="table col-xl-12 table-bordered">
+        <tr>
+          <th class="table-secondary col-xl-3 align-middle">注文日</th>
+          <td class="col-xl-9"><%= @order.created_at.strftime('%Y/%m/%d') %></td>
+        </tr>
+        <tr>
+          <th class="table-secondary col-xl-3 align-middle">配送先</th>
+          <td class="col-xl-9">
+            〒<%= @order.mailing_address_postal_code %><br>
+            <%= @order.mailing_address %><br>
+            <%= @order.mailing_address_name %>
+          </td>
+        </tr>
+        <tr>
+          <th class="table-secondary col-xl-3 align-middle">支払方法</th>
+          <td class="col-xl-9"><%= @order.payment_method_i18n %></td>
+        </tr>
+        <tr>
+          <th class="table-secondary col-xl-3 align-middle">ステータス</th>
+          <td class="col-xl-9"><%= @order.status_i18n %></td>
+        </tr>
+      </table>
+    </div>
+    <div  class="col-xl-4">
+      <table class="table col-xl-12 table-bordered">
+        <tr>
+          <th class="table-secondary col-xl-5">商品合計金額</th>
+          <td class="col-xl-7"><%= number_to_currency(@order.billing, :locale => 'jp') %></td>
+        </tr>
+        <tr>
+          <th class="table-secondary col-xl-5">送料</th>
+          <td class="col-xl-7">800円</td>
+        </tr>
+        <tr>
+          <th class="table-secondary col-xl-5">請求金額</th>
+          <td class="col-xl-7"><%= number_to_currency((@order.billing + 800), :locale => 'jp') %></td>
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+  <div class="row mb-2">
+    <div class="col-xl-3">
+      <h5>注文内容</h5>
+    </div>
+  </div>
+  <div class="row col-xl-10">
+    <table class="col-xl-12 table table-bordered mb-3">
+      <thead class="table-secondary">
+        <tr>
+          <th style="width: 50%" scope="col">商品名</th>
+          <th style="width: 20%" scope="col">単価（税込）</th>
+          <th style="width: 10%" scope="col">個数</th>
+          <th style="width: 20%" scope="col">小計</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order_details.each do |order_detail| %>
+          <tr>
+            <td><%= order_detail.item.name %></td>
+            <td><%= number_to_currency(order_detail.item.with_tax_price,  :locale => 'jp') %></td>
+            <td><%= order_detail.amount %></td>
+            <td><%= number_to_currency(order_detail.subtotal,  :locale => 'jp') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
