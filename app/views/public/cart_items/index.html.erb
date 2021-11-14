@@ -1,55 +1,52 @@
-<div class="container-xl">
+<div class="container-xl mb-3">
 
-  <div class="row">
-    <div class="col-xl-10">
-      <h3>ショッピングカート</h3>
+  <div class="row mb-3">
+    <div class="col-xl-4">
+      <h3 class="bg-light text-dark text-center">ショッピングカート</h3>
     </div>
-
+    <div class="col-xl-6"></div>
     <div class="col-xl-2">
       <%= link_to "カートを空にする", cart_items_destroy_all_path, method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-success" %>
     </div>
-
   </div>
 
   <div class="row">
     <div class="col-xl-12">
-      <table class="table">
-        <thead>
+      <table class="col-xl-12 table-bordered mb-3">
+        <thead class="table-secondary">
           <tr>
-            <th scope="col">商品名</th>
-            <th scope="col">単価（税込）</th>
-            <th scope="col">数量</th>
-            <th scope="col">小計</th>
-            <th scope="col",colspan="1"></th>
+            <th style="width: 45%" scope="col">商品名</th>
+            <th style="width: 15%" scope="col">単価（税込）</th>
+            <th style="width: 15%" scope="col">数量</th>
+            <th style="width: 15%" scope="col">小計</th>
+            <th style="width: 10%" scope="col",colspan="1"></th>
           </tr>
         </thead>
 <!--ここから下が可変-->
         <tbody>
           <% @cart_items.each do |cart_item| %>
           <tr scope="col">
-            <td>
-              <%= attachment_image_tag cart_item.item, :image, :fill, 40, 40, format: 'jpeg' %>　<%= cart_item.item.name %>
+            <td class="p-2">
+              <%= attachment_image_tag cart_item.item, :image, :fill, 100, 60, format: 'jpeg' %>　<%= cart_item.item.name %>
             </td>
-            <td>
+            <td class="p-2">
               <%= number_to_currency(cart_item.item.with_tax_price,  :locale => 'jp') %>
             </td>
-            <td>
-              <%= form_with model: @cart_item, url:cart_item_path(cart_item.id), method: :patch, local:true do |f| %>
-              <%= cart_item.amount %>
-              <%= f.select :amount, *[1..10] %>
+            <td class="p-2">
+              <%= form_with model:CartItem, url:cart_item_path(cart_item.id), method: :patch, local:true do |f| %>
+              <%= f.select :amount, options_for_select( *[1..10], {selected: cart_item.amount.to_i} ) %>
               <%= f.submit '変更' %>
               <% end %>
             </td>
-            <td>
+            <td class="p-2">
               <%= number_to_currency(cart_item.subtotal,  :locale => 'jp') %>
             </td>
             <td>
-              <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-success" %>
+              <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-success d-flex justify-content-center" %>
             </td>
             <% @sum += cart_item.subtotal %>
           </tr>
           <% end %>
-
         </tbody>
       </table>
 
@@ -57,22 +54,19 @@
     <div class="col-xl-3">
       <%= link_to "買い物を続ける", items_path, class: "btn btn-primary" %>
     </div>
-
-    <div class="col-xl-5">
-    </div>
-
-
+    <div class="col-xl-5"></div>
     <div class="col-xl-4">
-      <table class="table">
+      <table class="table table-bordered">
         <tr>
-          <th scope="col">合計金額</th>
+          <th class="table-secondary" scope="col">合計金額</th>
           <td scope="col"><%= number_to_currency(@sum, :locale => 'jp') %></td>
         </tr>
       </table>
     </div>
-
   </div>
 
-  <%= link_to "注文詳細入力", new_order_path, class: "btn btn-success" %>
+  <div class="mx-auto" style="width: 150px;">
+    <%= link_to "注文詳細入力", new_order_path, class: "btn btn-success" %>
+  </div>
 
 </div>
