@@ -52,6 +52,9 @@ class Public::OrdersController < ApplicationController
 
   def index
     @orders = Order.where(customer_id: current_customer.id).reverse_order.page(params[:page]).per(10)
+    # @order = Order.find(params[:id])
+    @order_details = OrderDetail.where(order_id: @orders)
+
   end
 
   def show

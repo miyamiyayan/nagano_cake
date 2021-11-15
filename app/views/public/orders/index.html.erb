@@ -34,6 +34,9 @@
               </p>
             </td>
             <td>
+              <% @order_details.each do |order_detail| %>
+              <%= order_detail.item.name %><br>
+              <% end %>
             </td>
             <td>
               <%= number_to_currency(order.billing, :locale => 'jp') %>
