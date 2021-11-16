@@ -1,7 +1,7 @@
 class Public::OrdersController < ApplicationController
-  
+
   before_action :authenticate_customer!
-  
+
   def new
     @customer = Customer.find(current_customer.id)
     @order = Order.new
@@ -54,9 +54,6 @@ class Public::OrdersController < ApplicationController
 
   def index
     @orders = Order.where(customer_id: current_customer.id).reverse_order.page(params[:page]).per(10)
-    # @order = Order.find(params[:id])
-    @order_details = OrderDetail.where(order_id: @orders)
-
   end
 
   def show
