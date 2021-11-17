@@ -12,7 +12,8 @@
   <div class="row">
     <div class="col-xl-4"></div>
     <div class="col-xl-4">
-      <%= link_to '退会しない', customers_path, class: "btn btn-primary btn-lg"%>　　<%= link_to '退会する', customers_withdraw_path, method: :patch, class: "btn btn-danger btn-lg"%>
+      <%= link_to '退会しない', customers_path, class: "btn btn-primary btn-lg mr-3"%>
+      <%= link_to '退会する', customers_withdraw_path, method: :patch, "data-confirm" => "本当に退会してよろしいですか？", class: "btn btn-danger btn-lg"%>
     </div>
     <div class="col-xl-4"></div>
   </div>
