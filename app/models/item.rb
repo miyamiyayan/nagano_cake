@@ -5,6 +5,9 @@ class Item < ApplicationRecord
     has_many :order_details, dependent: :destroy
     belongs_to :genre
 
+    validates :name, :introduction, :price, :image, presence: true
+
+
 
     def with_tax_price
       (price.to_i * 1.1).floor

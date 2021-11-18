@@ -6,6 +6,9 @@ end
 
   belongs_to :customer
   belongs_to :item
+  
+  validates :amount, presence: true
+
 
 
   def validate_into_cart

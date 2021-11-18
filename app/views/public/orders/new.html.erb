@@ -27,7 +27,7 @@
       </div>
       <ul>
         <li>
-          <%= f.radio_button :address_option, 0 %>
+          <%= f.radio_button :address_option, 0, checked: true %>
           <%= f.label :mailing_full_addres, "ご自身の住所" %>
           <ul><li><%= @customer.full_address %></li></ul>
         </li>
