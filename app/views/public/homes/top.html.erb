@@ -47,7 +47,7 @@
               <%= item.name %>
             <% end %>
             </br>
-            <%= number_to_currency(item.price,  :locale => 'jp') %>
+            <%= number_to_currency(item.with_tax_price,  :locale => 'jp') %>
           </div>
         </div>
       <% end %>

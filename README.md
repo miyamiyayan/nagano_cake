@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+こちらは DMM webcamp 応用課題「ながのCAKE」のWEBサイトです。
+見やすくなるようになるべく意識はしました。
 
-Things you may want to cover:
 
-* Ruby version
+# 機能
 
-* System dependencies
+* customer
+  * 会員登録、編集、退会
+  * 商品閲覧、カートおよび購入（注文）
+  * 送り先の登録
+  * 注文履歴の確認
 
-* Configuration
+* admin
+  * 商品登録
+  * ジャンル登録
+  * 注文履歴確認とステータスの更新
+  * 会員情報確認
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 会員登録前
+  * 商品閲覧
